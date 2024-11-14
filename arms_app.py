@@ -5,8 +5,9 @@ import streamlit as st
 st.title('UK arms export licences, 2008-23')
 st.subheader("How many arms licences has the UK issued for a country?")
 
-# load data and create column for Year
-df = pd.read_csv('smaller_arms_file.csv')
+# load data and create column for Year with type to try and avoid commas in app
+# df = pd.read_csv('smaller_arms_file.csv')
+df = pd.read_csv('smaller_arms_file.csv', dtype={'year': str})
 
 # make list of countries, sort alphabetically and use for dropdown
 countries = df.destination.unique().tolist()
