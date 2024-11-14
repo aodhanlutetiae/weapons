@@ -18,6 +18,5 @@ country1 = df[df.destination == option].groupby('year').destination.count()
 st.line_chart(country1)
 
 # print link to the README on the github repo
-st.markdown('[About](https://github.com/aodhanlutetiae/arms/blob/main/README.md)')
-st.link_button('Source', 'https://github.com/caatdata/uk-arms-export-data',  use_container_width=False)
+st.link_button('About', 'https://github.com/aodhanlutetiae/weapons/blob/main/README.md',  use_container_width=False)
 
